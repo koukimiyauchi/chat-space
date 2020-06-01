@@ -57,6 +57,7 @@ Things you may want to cover:
 ###Association
 - has_many :massages
 - has_many :groups_users
+- has_many :users, throgh: :groups_users
 
 
 
