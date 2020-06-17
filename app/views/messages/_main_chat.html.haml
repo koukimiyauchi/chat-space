@@ -1,0 +1,46 @@
+.right_box
+  .right_box__header
+    .right_box__header__groups-name
+      test
+      .right_box__header__menber-name
+        menber:mess    
+    = link_to "#", class: "right_box__header__edit-btn" do
+      = "Edit"
+     
+        
+  .right_box__center
+    .right_box__center__upper-info__tolker
+      kouki
+      .right_box__center__upper-info__tolker__date
+        2020/06/15(wed) 17:43:01
+    .right_box__center__text
+      おはよう！
+    
+    .right_box__center__upper-info__tolker
+      kouki
+      .right_box__center__upper-info__tolker__date
+        2020/06/15(wed) 17:43:01
+    .right_box__center__text
+      おはよう！
+
+
+  .right_box__footer
+    .right_box__footer__message
+      .right_box__footer__message__text
+        type a message
+      .right_box__footer__message__icon
+        %label{class: "image"}            
+          = icon('fas', 'image')
+          %input{type: "file", class: "hidden"}
+
+        -# %label(class="image")
+        -#   = link_to "#" do
+        -#     =icon('fas','image')
+
+
+
+    .right_box__footer__send
+      Send
+
+
+  
