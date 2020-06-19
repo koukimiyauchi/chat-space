@@ -1,12 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
 .wrapper {
   display: flex;
-  width: 100vw;
 }
-
 .left_box {
   background-color: #2f3e51;
   width: 300px;
@@ -86,7 +83,7 @@
 .right_box {
   background-color: #fafafa;
   width: calc(100vw - 300px);
-  
+  height: 100vh;
   &__header {
     display: flex;
     justify-content: space-between;
@@ -125,20 +122,23 @@
   &__center {
     height: calc(100vh - 190px);
     margin: 0 40px;
+    padding-top: 35px;
+    &__comments {
+      background-color: #fafafa;
+      height: 40px;
+      display: flex;
+      margin-bottom: 46px;
       &__upper-info__tolker {
         background-color: #fafafa;
         color: #333333;
         font-size: 16px;
-        width: 452px;
         height: 20px;
-        margin-top: 35px;
-        display: flex;
-        margin-right: 5px;
-          &__date {
-            color: #999999;
-            font-size: 12px;
-            margin-left: 10px;
-            }
+        margin-right: 10px;
+      &__date {
+        color: #999999;
+        font-size: 5px;
+        left: 10px;
+      }
       }
       &__text {
         color: #434A54;
@@ -146,39 +146,40 @@
         margin-top: 12px;
         margin-bottom: 46px;
       }
+    }
   }
   &__footer {
   background-color: #d2d2d2;
   height: 90px;
   display: flex;
   align-items: center;
-    &__message {
-      height: 50px;
-      width: calc(100vw - 500px);
-      background-color: #ffffff;
-      margin-left: 40px;
-      line-height: 50px;
-      position: relative;
+  &__message {
+    height: 50px;
+    width: calc(100vw - 500px);
+    background-color: #ffffff;
+    margin-left: 40px;
+    line-height: 50px;
+    position: relative;
       
-      &__text {
-        background-color: #ffffff;
-        height: 40px;
-        width: calc(100vw - 555px);
-        position: absolute;
-        left: 5px;
-        margin-top: 5px;
-        line-height: 40px;
+  &__text {
+    background-color: #ffffff;
+    height: 40px;
+    width: calc(100vw - 555px);
+    position: absolute;
+    left: 5px;
+    margin-top: 5px;
+    line-height: 40px;
+  }
+  &__icon {
+    background-color: #ffffff;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 2px;
+      .hidden {
+        display: none;
       }
-      &__icon {
-        background-color: #ffffff;
-        height: 40px;
-        width: 40px;
-        position: absolute;
-        right: 2px;
-          .hidden {
-            display: none;
-          }
-      }
+  }
         
     }
     &__send {
