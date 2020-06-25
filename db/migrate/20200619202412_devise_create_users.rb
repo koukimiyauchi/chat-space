@@ -3,6 +3,8 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|
+      t.references :group, foreign_key: true
+      t.references :user, foreign_key: true
       ## Database authenticatable
       t.string :name,               null: false
       t.string :email,              null: false, default: ""
