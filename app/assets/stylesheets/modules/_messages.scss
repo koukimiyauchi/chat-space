@@ -47,6 +47,7 @@
     background-color: #2f3e51;
     width: 300px;
     height: calc(100vh - 100px);
+    overflow: scroll;
 
     &__groups {
       background-color: #2f3e51;
@@ -70,12 +71,10 @@
           margin-top: 5px;
           font-size: 11px;
           color: #ffffff;
-        }
-
-          
-        }
+      }     
     }
-  } 
+  }
+} 
 
 
 a{
@@ -96,17 +95,22 @@ a{
       &__groups-name {
       background-color: #ffffff;
       height: (100px - 62px);
-      width: 80px;
       font-size: 20px;
       color: #333333;
       }
+      &__menber-box{
+        display: flex;
+        margin-top: 15px;
+      }
       &__menber-name {
-      background-color: #ffffff;
-      height: 15px;
-      width: 80px;
-      margin-top: 15px;
-      font-size: 12px;
-      color: #999999;
+        background-color: #ffffff;
+        height: 15px;
+        font-size: 12px;
+        color: #999999;
+      }
+      &__menber {
+        font-size: 12px;
+        color: #999999;
       }
       &__edit-btn {
       background-color: #ffffff;
@@ -118,38 +122,42 @@ a{
       text-align: center;
       text-decoration: none;
       }
-    }
+  }
 
-  
   &__center {
     height: calc(100vh - 190px);
     margin: 0 40px;
     padding-top: 35px;
+    overflow: scroll;
+    
     &__comments {
       background-color: #fafafa;
       height: 40px;
-      display: flex;
       margin-bottom: 46px;
-      &__upper-info__tolker {
-        background-color: #fafafa;
-        color: #333333;
-        font-size: 16px;
-        height: 20px;
-        margin-right: 10px;
-      &__date {
-        color: #999999;
-        font-size: 5px;
-        left: 10px;
-      }
-      }
-      &__text {
-        color: #434A54;
-        font-size: 14px;
-        margin-top: 12px;
-        margin-bottom: 46px;
+      &__upper-info {
+        display: flex;
+        &__tolker {
+          background-color: #fafafa;
+          color: #333333;
+          font-size: 16px;
+          height: 20px;
+          margin-right: 10px;
+        &__date {
+          color: #999999;
+          font-size: 5px;
+          left: 10px;
+        }
       }
     }
   }
+    &__text {
+      color: #434A54;
+      font-size: 14px;
+      margin-top: 12px;
+      margin-bottom: 46px;
+    }
+  } 
+
   &__footer {
   background-color: #d2d2d2;
   height: 90px;
@@ -165,11 +173,10 @@ a{
       
   &__text {
     background-color: #ffffff;
-    height: 40px;
+    height: 50px;
     width: calc(100vw - 555px);
     position: absolute;
-    left: 5px;
-    margin-top: 5px;
+
     line-height: 40px;
   }
   &__icon {
@@ -194,7 +201,8 @@ a{
       text-decoration: none;
       color: #ffffff;
     }
-
+    .new_message{
+      display: flex;
+    }
   }
-
 }

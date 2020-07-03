@@ -16,11 +16,11 @@
   .left_box__content
     - current_user.groups.each do |group|
       .left_box__content__groups
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .left_box__content__groups__group
             = group.name
           .left_box__content__groups__message
-            まだメッセージがありません
+            = group.left_box__content
 
       
       

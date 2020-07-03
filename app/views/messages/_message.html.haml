@@ -1,0 +1,14 @@
+.right_box__center__comments
+  .right_box__center__comments__upper-info
+    .right_box__center__comments__upper-info__tolker
+      = message.user.name
+    .right_box__center__comment__upper-info__tolker__date
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .right_box__center__text
+    - if message.content.present?
+      .right_box__center__text__content
+        = message.content
+    = image_tag message.image.url, class: 'right_box__center__text' if message.image.present?
+
+
+
