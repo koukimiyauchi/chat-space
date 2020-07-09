@@ -51,13 +51,11 @@ $(function(){
     contentType: false
   })
     .done(function(data){
-      console.log(data)
       var html = buildHTML(data);
       $('.right_box__center').append(html);
       // 「append()」は、指定した子要素の最後にテキスト文字やHTML要素を追加することができるメソッド
       $('.right_box__center').animate({ scrollTop: $('.right_box__center')[0].scrollHeight});
       $('.new_message')[0].reset();
-      console.log(html)
     })
     .always(function(){
       $(".right_box__footer__send").prop("disabled", false);
