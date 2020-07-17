@@ -15,6 +15,7 @@ $(function(){
               <div class="right_box__center__text__content">
                 ${message.content}
             </div>
+            <img src="${message.image}">
           </div>
       </div>`
       return html;
@@ -40,6 +41,7 @@ $(function(){
 
   }
   $('#new_message').on('submit', function(e){
+    console.log(new_message)
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -52,6 +54,7 @@ $(function(){
       contentType: false
     })
       .done(function(data){
+        console.log(data)
         var html = buildHTML(data);
         $('.right_box__center').append(html);
         // 「append()」は、指定した子要素の最後にテキスト文字やHTML要素を追加することができるメソッド

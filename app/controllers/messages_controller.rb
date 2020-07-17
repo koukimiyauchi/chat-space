@@ -10,15 +10,18 @@ class MessagesController < ApplicationController
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|
-        format.html{redirect_to group_messages_path, notivce:""}
+        # format.html
         format.json
       end
     else
       @messages = @group.messages.includes(:user)
       flash.now[:alert] = 'メッセージを入力してください。'
-      render :index
+      respond_to do |format|
+        format.json
+        format.html {render :index}
     end
   end
+end
 
   private
 
