@@ -1,6 +1,7 @@
 class GroupsController < ApplicationController
 
   def index
+    
   end
   
   def new
@@ -18,6 +19,7 @@ class GroupsController < ApplicationController
 
   def edit
     @group = Group.find(params[:id])
+
   end
 
   def update
