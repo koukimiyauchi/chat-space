@@ -132,7 +132,6 @@ a{
     
     &__comments {
       background-color: #fafafa;
-      height: 40px;
       margin-bottom: 46px;
       &__upper-info {
         display: flex;
@@ -146,18 +145,17 @@ a{
           color: #999999;
           font-size: 5px;
           left: 10px;
+          }
         }
       }
     }
-  }
     &__text {
       color: #434A54;
       font-size: 14px;
       margin-top: 12px;
-      margin-bottom: 46px;
-    }
-  } 
-
+      margin-bottom: 18px;
+      }
+  }
   &__footer {
   background-color: #d2d2d2;
   height: 90px;

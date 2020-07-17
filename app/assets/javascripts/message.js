@@ -14,10 +14,10 @@ $(function(){
             <div class="right_box__center__text">
               <div class="right_box__center__text__content">
                 ${message.content}
+              </div>
+              <img class='right_box__center__image' src="${message.image}">
             </div>
-            <img src="${message.image}">
-          </div>
-      </div>`
+        </div>`
       return html;
     } else {
       var html =
